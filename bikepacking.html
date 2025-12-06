@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikepacking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">← Torna alla Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bikepacking</h1>
+
+        <button class="accordion">Turin - Mont Ventoux - Barcelona (777km, 8527 m d+)</button>
+        <div class="panel">
+            <ul class="activity-list">
+                <li><a href="#" target="_blank">Tappa 1: </a></li>
+                <li><a href="#" target="_blank">Tappa 2: </a></li>
+                <li><a href="#" target="_blank">Tappa 3: </a></li>
+                <li><a href="#" target="_blank">Tappa 4: </a></li>
+            </ul>
+        </div>
+
+        <button class="accordion">Aosta Valley loop</button>
+        <div class="panel">
+            <ul class="activity-list">
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>&copy; 2024 - Sito Personale</footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Attiva/Disattiva la classe 'active' per cambiare il +/- */
+                this.classList.toggle("active");
+
+                /* Gestisce l'apertura del pannello */
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>

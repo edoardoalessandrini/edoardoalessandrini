@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scuba diving</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">← Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Scuba diving</h1>
+        <p><b>Num of dives:</b> 32</p>
+        <p><b>My certifications (TSA) taken with <a href="https://www.custorino.it/" target="_blank">Cus Torino</a>:</b> Advanced open water 30m + night dive and orientation divers specialization</p>
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+        <button class="accordion">🇪🇬 Egypt</button>
+        <div class="panel">
+            <h3 style="margin-top: 15px; font-size: 1rem; color: #666;">Marsa Alam</h3>
+            <ul class="hike-list">
+                <li class="hike-item">
+                    <span class="hike-name">Marsa Egla</span>
+                    <span class="hike-details">-18m | <span class="difficulty">Dugongo</span></span>
+                </li>
+                <li class="hike-item">
+                    <span class="hike-name">Hamata islands</span>
+                    <span class="hike-details">-23m | <span class="difficulty"></span></span>
+                </li>
+                <li class="hike-item">
+                    <span class="hike-name">Abu Dabbab</span>
+                    <span class="hike-details">-25m | <span class="difficulty">Big turtles</span></span>
+                </li>
+                <li class="hike-item">
+                    <span class="hike-name">Happy Life resort</span>
+                    <span class="hike-details">-19m | <span class="difficulty">Night dive</span></span>
+                </li>
+                </li>
+                <li class="hike-item">
+                    <span class="hike-name">Dolphin House</span>
+                    <span class="hike-details">-21m | <span class="difficulty">Cave dive</span></span>
+                </li>
+                </li>
+                <li class="hike-item">
+                    <span class="hike-name">Elphinstone Reef</span>
+                    <span class="hike-details">-44m | <span class="difficulty">Sharks, three longimanus</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion">🇬🇷 Greece</button>
+        <div class="panel">
+            <h3 style="margin-top: 15px; font-size: 1rem; color: #666;">Rhodes</h3>
+            <ul class="hike-list">
+                <li class="hike-item">
+                    <span class="hike-name">First dive</a></span>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion">🇪🇸 Espana</button>
+        <div class="panel">
+            <h3 style="margin-top: 15px; font-size: 1rem; color: #666;">Lanzarote</h3>
+            <ul class="hike-list">
+                <li class="hike-item">
+                    <span class="hike-name">Lanzarote</span>
+                    <span class="hike-details">-18m | <span class="difficulty"></span></span>
+                </li>
+            </ul>
+
+            <h3 style="margin-top: 20px; font-size: 1rem; color: #666;">Fuerteventura</h3>
+            <ul class="hike-list">
+                <li class="hike-item">
+                    <span class="hike-name">Fuerteventura</span>
+                    <span class="hike-details">-30m | <span class="difficulty"></span></span>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion">🇮🇹 Italy</button>
+        <div class="panel">
+            <h3 style="margin-top: 15px; font-size: 1rem; color: #666;">Liguria</h3>
+            <ul class="hike-list">
+                <li class="hike-item">
+                    <span class="hike-name">Bergeggi Canalone</span>
+                    <span class="hike-details">30m max | <span class="difficulty">training</span></span>
+                </li>
+                <li class="hike-item">
+                    <span class="hike-name">Bergeggi Pifferaio</a></span>
+                    <span class="hike-details">18m max | <span class="difficulty">training</span></span>
+                </li>
+            </ul>
+            
+            </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.youtube.com/@edoardoalessandrini" target="_blank">YouTube</a>
+            <a href="https://www.strava.com/athletes/110397259" target="_blank">Strava</a>
+            <a href="https://www.instagram.com/ed0_ales/?next=%2F" target="_blank">Instagram</a>
+        </div>
+
+        <div class="footer-contact">
+            <a href="mailto:edoales@gmail.com">edoales@gmail.com</a>
+        </div>
+
+        <div class="footer-date">
+            Last update: 7 Dic 2025
+        </div>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    /* Imposta un'altezza massima sufficiente per contenere tutto */
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>

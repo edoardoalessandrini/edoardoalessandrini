@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikepacking | Edoardo Alessandrini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">← Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bikepacking</h1>
+
+        <button class="accordion">Turin - Mont Ventoux - Barcelona (777km, 8527 m d+)</button>
+        <div class="panel">
+            <ul class="activity-list">
+                <li><a href="https://www.strava.com/activities/15166339851" target="_blank">Stage 1: Briancon - Embrun 82,06 km	1.145 m	</a></li>
+                <li><a href="https://www.strava.com/activities/15180127880" target="_blank">Stage 2: Embrun - St Romain de Malegarde 170,52 km 1.495 m	</a></li>
+                <li><a href="https://www.strava.com/activities/15201529227" target="_blank">Stage 3: Mont Ventoux + Tour de France 110,04 km 2.302 m	</a></li>
+                <li><a href="https://www.strava.com/activities/15210585105" target="_blank">Stage 4: St Romain Malegarde - Montpellier 132,58 km 541 m	</a></li>
+                <li><a href="https://www.strava.com/activities/15221887664" target="_blank">Stage 5: Perpignano - Girona 94,63 km 796 m	 </a></li>
+                <li><a href="https://www.strava.com/activities/15231779124" target="_blank">Stage 6: Girona - Barcelona 102,98 km 634 m	 </a></li>
+                <li><a href="https://www.strava.com/activities/15252405078" target="_blank">Stage 7: Barcelona ride 84,63 km	1.614 m		 </a></li>
+            </ul>
+        </div>
+
+        <button class="accordion">Aosta Valley loop (254,95km, 5381m d+)</button>
+        <div class="panel">
+            <ul class="activity-list">
+                <li><a href="https://www.strava.com/activities/15379522686" target="_blank">Stage 1: Moncenisio - Iseran 88,43 km 3.127 m	</a></li>
+                <li><a href="https://www.strava.com/activities/15390346039" target="_blank">Stage 2: Pt. Saint Bernard - Vda 166,52 km 2.254 m		</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.youtube.com/@edoardoalessandrini" target="_blank">YouTube</a>
+            <a href="https://www.strava.com/athletes/110397259" target="_blank">Strava</a>
+            <a href="https://www.instagram.com/ed0_ales/?next=%2F" target="_blank">Instagram</a>
+        </div>
+
+        <div class="footer-contact">
+            <a href="mailto:edoales@gmail.com">edoales@gmail.com</a>
+        </div>
+
+        <div class="footer-date">
+            Last update: 7 Dic 2025
+        </div>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Attiva/Disattiva la classe 'active' per cambiare il +/- */
+                this.classList.toggle("active");
+
+                /* Gestisce l'apertura del pannello */
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>
